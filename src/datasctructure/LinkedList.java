@@ -1,5 +1,10 @@
 package datasctructure;
 
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
+import java.util.Objects;
+
 public class LinkedList {
     private Node head;
     private Node tail;
@@ -40,6 +45,7 @@ public class LinkedList {
             tail = newNodeToAppend;
         }
         lenght ++;
+        System.out.println("Append method called.");
     }
 
     public Node removeLast(){
@@ -61,6 +67,23 @@ public class LinkedList {
         }
         return temp;
     }
+
+    public Node prepend(int value){
+        Node newNodeToPrepend = new Node(value);
+
+        if (lenght == 0) {
+            head = newNodeToPrepend;
+            tail = newNodeToPrepend;
+        }else {
+            newNodeToPrepend.next = head;
+            head = newNodeToPrepend;
+        }
+        lenght++;
+
+        return newNodeToPrepend;
+    }
+
+
 
     public Node getHead() {
         return head;
@@ -84,5 +107,14 @@ public class LinkedList {
 
     public void setLenght(int lenght) {
         this.lenght = lenght;
+    }
+
+    @Override
+    public String toString() {
+        return "LinkedList{" +
+                "head=" + head +
+                ", tail=" + tail +
+                ", lenght=" + lenght +
+                '}';
     }
 }
