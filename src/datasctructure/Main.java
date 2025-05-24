@@ -8,10 +8,9 @@ public class Main {
         newLinkedList.append(3);
         newLinkedList.append(4);
 
-        newLinkedList.get(3);
-//
-//        newLinkedList.set(2, 9);
-        newLinkedList.setBoolean(2,9);
+        newLinkedList.insert(2, 6);
+        newLinkedList.insert(3, 7);
+        newLinkedList.insert(4, 8);
 
         newLinkedList.printList();
 
