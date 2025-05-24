@@ -8,13 +8,13 @@ public class Main {
         newLinkedList.append(3);
         newLinkedList.append(4);
 
-        newLinkedList.get(3);
-//
-//        newLinkedList.set(2, 9);
-        newLinkedList.setBoolean(2,9);
+
+        newLinkedList.remove(2);
+
+
+        newLinkedList.reverse();
 
         newLinkedList.printList();
-
 
 
 

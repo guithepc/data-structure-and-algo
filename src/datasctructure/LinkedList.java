@@ -45,7 +45,6 @@ public class LinkedList {
             tail = newNodeToAppend;
         }
         lenght ++;
-        System.out.println("Append method called.");
     }
 
     public Node removeLast(){
@@ -109,7 +108,6 @@ public class LinkedList {
     }
 
     public Node set (int index, int value){
-        Node newNode = new Node(value);
         Node temp = head;
         Node pre = head;
 
@@ -130,6 +128,72 @@ public class LinkedList {
         }
         return false;
     }
+
+    public boolean insert (int index, int value){
+        if (index < 0 || index > lenght) return false;
+
+        if (index == lenght){
+            this.append(value);
+            return true;
+        }
+
+        if (index == 0){
+            this.prepend(value);
+            return true;
+        }
+
+        Node newNode = new Node(value);
+        Node temp = head;
+        Node prev = head;
+
+        for (int i = 0; i < index; i++){
+            prev = temp;
+            temp = temp.next;
+        }
+        newNode.next = prev.next;
+        prev.next = newNode;
+        lenght++;
+        return true;
+    }
+
+    public Node remove (int index){
+        Node node = this.get(0);
+        if(node == null) return null;
+
+        if (index == 0 ) return removeFirst();
+        if (index == lenght-1) return removeLast();
+
+        Node temp = head;
+        Node prev = head;
+        for (int i = 0; i < index; i++){
+            prev = temp;
+            temp = temp.next;
+        }
+
+        prev.next = temp.next;
+        temp.next = null;
+        lenght --;
+
+        return temp;
+    }
+
+    public void reverse(){
+        Node temp = head;
+        head = tail;
+        tail = temp;
+        Node before = null;
+        Node after = temp.next;
+
+        for (int i = 0; i < lenght; i++){
+            after = temp.next;
+            temp.next = before;
+            before = temp;
+            temp = after;
+        }
+
+    }
+
+
 
 
 
