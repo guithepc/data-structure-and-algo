@@ -156,6 +156,29 @@ public class LinkedList {
         return true;
     }
 
+    public Node remove (int index){
+        Node node = this.get(0);
+        if(node == null) return null;
+
+        if (index == 0 ) return removeFirst();
+        if (index == lenght-1) return removeLast();
+
+        Node temp = head;
+        Node prev = head;
+        for (int i = 0; i < index; i++){
+            prev = temp;
+            temp = temp.next;
+        }
+
+        prev.next = temp.next;
+        temp.next = null;
+        lenght --;
+
+        return temp;
+    }
+
+
+
 
 
     public Node getHead() {
