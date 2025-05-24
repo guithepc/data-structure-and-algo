@@ -8,7 +8,6 @@ public class Main {
 
         System.out.println(newLinkedList.removeFirst().value);
         System.out.println(newLinkedList.removeFirst().value);
-        System.out.println(newLinkedList.removeFirst());
 
 
 
