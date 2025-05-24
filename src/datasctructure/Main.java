@@ -5,9 +5,15 @@ public class Main {
 
         LinkedList newLinkedList = new LinkedList(1);
         newLinkedList.append(2);
+        newLinkedList.append(3);
+        newLinkedList.append(4);
 
-        System.out.println(newLinkedList.removeFirst().value);
-        System.out.println(newLinkedList.removeFirst().value);
+        newLinkedList.get(3);
+//
+//        newLinkedList.set(2, 9);
+        newLinkedList.setBoolean(2,9);
+
+        newLinkedList.printList();
 
 
 
