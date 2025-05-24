@@ -11,8 +11,10 @@ public class Main {
 
         newLinkedList.remove(2);
 
-        newLinkedList.printList();
 
+        newLinkedList.reverse();
+
+        newLinkedList.printList();
 
 
 
