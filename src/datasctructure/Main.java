@@ -7,16 +7,16 @@ public class Main {
         newLinkedList.append(2);
         newLinkedList.append(3);
         newLinkedList.append(4);
+        newLinkedList.append(5);
+        newLinkedList.append(6);
 
-
-        newLinkedList.remove(2);
-
-
-        newLinkedList.reverse();
 
         newLinkedList.printList();
 
+//        System.out.println(newLinkedList.findMiddleNode().value);
 
+
+        System.out.println(newLinkedList.findMiddleNode().value);
 
     }
 }
